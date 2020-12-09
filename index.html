@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal BH Imóveis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- main css -->    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+<header>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="row-menu">
+                <div class="logo">
+                    <a href="">
+                        <img src="assets/images/logo_portal_bh_imoveis.png" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <nav>    
+                    <input type="checkbox" id="menu">
+                    <label for="menu" class="menu">
+                        <div class="hamburger hamburger--squeeze">
+                            <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </label>                     
+                    <ul>
+                        <li class="cl-effect-21"><a href="">Quem Somos</a></li>
+                        <li class="cl-effect-21"><a href="">Comprar Imóveis</a></li>
+                        <li class="cl-effect-21"><a href="">Anuciar Imóveis</a></li>
+                        <li class="cl-effect-21"><a href="">Contato</a></li>
+                    </ul>
+                </nav>   
+            </div>
+
+        </div>
+    </div>   
+</header>
+
+
+<section id="topo" style="background-image: url('assets/images/foto-topo-portal-bh-imoveis.jpg');">
+    <i></i>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 d-flex flex-column align-items-center justify-content-center">
+                <h1>O portal para o seu novo imóvel.</h1>
+                <form action="">
+                    <div class="area-form">
+                        
+                        <div class="box-select">
+                            <select name="tipo-servico" id="tipo-servico">
+                                <option value="comprar">Comprar</option>
+                                <option value="alugar">Alugar</option>
+                            </select>
+                        </div>
+
+                        <div class="box-select">
+                            <select name="tipo-imovel" id="tipo-imovel">
+                                <option value="apartamento">Apartamento</option>
+                                <option value="casa">Casa</option>
+                            </select>
+                        </div>
+
+                        <input nome="localizacao-imovel" id="localizacao-imovel" type="text" placeholder="Digite bairro ou cidade">
+
+                        <input type="submit" value="Buscar">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="destaque">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Destaques</h2>
+                
+                <div class="container-cards">
+
+                    <div class="hoverzoom">
+                        <img src="assets/images/imovel_001.jpg" alt="" />
+                        <a href="">
+                            <i></i>
+                            <h3>Residencial Flor de Liz</h3>
+                            <span>R$190.000,00</span>
+                            <span>Belo Horizonte</span>
+                            <svg width="49" height="12" viewBox="0 0 49 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="49" height="12" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.0204082 0.0833333)"/>
+                                </pattern>
+                                <image id="image0" width="49" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAMCAYAAADLeFVvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUIyMzExQzMxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUIyMzExQzQxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QjIzMTFDMTE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QjIzMTFDMjE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjWScjQAAADySURBVHjaYvz//z/DIANKQBwNxHOB+BkxGpgYBh9gBeImIL4JxJ1ArExIA+MgjAlpIH6CxP8NxLOBeBYQXxwqnmAD4p845FYA8QQgPonuiWIgbQvEfweBB34BsQAQexBQtxOI+4B4F8wTF4C0PsPQBIeBOJkFSJwDYnUg/j4IHAVK24xAzAfEzHjUfQHiZUC8Hoifg2KCG8jgwZMO6e0JEDgOxJpY5F9DM/lkIH4BEwTFxFcoHkzgBxr/MRBPBOKZ0FgY9KUTAzRpcwDxJWhptARa1GIFLIPQA1zQtL4PiOcQo2EwxgQnEBsC8TFiNQAEGAC+WENTTUOVCAAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>                                                                                    
+                        </a>
+                    </div>
+
+                    <div class="hoverzoom">
+                        <img src="assets/images/imovel_meio_03.jpg" alt="" />
+                        <a href="">
+                            <i></i>
+                            <h3>Residencial Flor de Liz</h3>
+                            <span>R$190.000,00</span>
+                            <span>Belo Horizonte</span>
+                            <svg width="49" height="12" viewBox="0 0 49 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="49" height="12" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.0204082 0.0833333)"/>
+                                </pattern>
+                                <image id="image0" width="49" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAMCAYAAADLeFVvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUIyMzExQzMxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUIyMzExQzQxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QjIzMTFDMTE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QjIzMTFDMjE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjWScjQAAADySURBVHjaYvz//z/DIANKQBwNxHOB+BkxGpgYBh9gBeImIL4JxJ1ArExIA+MgjAlpIH6CxP8NxLOBeBYQXxwqnmAD4p845FYA8QQgPonuiWIgbQvEfweBB34BsQAQexBQtxOI+4B4F8wTF4C0PsPQBIeBOJkFSJwDYnUg/j4IHAVK24xAzAfEzHjUfQHiZUC8Hoifg2KCG8jgwZMO6e0JEDgOxJpY5F9DM/lkIH4BEwTFxFcoHkzgBxr/MRBPBOKZ0FgY9KUTAzRpcwDxJWhptARa1GIFLIPQA1zQtL4PiOcQo2EwxgQnEBsC8TFiNQAEGAC+WENTTUOVCAAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>                                                          
+                        </a>
+                    </div>                    
+
+                    <div class="hoverzoom">
+                        <img src="assets/images/imovel_meio_02.jpg" alt="" />
+                        <a href="">
+                            <i></i>
+                            <h3>Residencial Flor de Liz</h3>
+                            <span>R$190.000,00</span>
+                            <span>Belo Horizonte</span>
+                            <svg width="49" height="12" viewBox="0 0 49 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="49" height="12" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.0204082 0.0833333)"/>
+                                </pattern>
+                                <image id="image0" width="49" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAMCAYAAADLeFVvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUIyMzExQzMxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUIyMzExQzQxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QjIzMTFDMTE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QjIzMTFDMjE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjWScjQAAADySURBVHjaYvz//z/DIANKQBwNxHOB+BkxGpgYBh9gBeImIL4JxJ1ArExIA+MgjAlpIH6CxP8NxLOBeBYQXxwqnmAD4p845FYA8QQgPonuiWIgbQvEfweBB34BsQAQexBQtxOI+4B4F8wTF4C0PsPQBIeBOJkFSJwDYnUg/j4IHAVK24xAzAfEzHjUfQHiZUC8Hoifg2KCG8jgwZMO6e0JEDgOxJpY5F9DM/lkIH4BEwTFxFcoHkzgBxr/MRBPBOKZ0FgY9KUTAzRpcwDxJWhptARa1GIFLIPQA1zQtL4PiOcQo2EwxgQnEBsC8TFiNQAEGAC+WENTTUOVCAAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>                                                         
+                        </a>
+                    </div>
+
+                    <div class="hoverzoom">
+                        <img src="assets/images/imovel_meio_02.jpg" alt="" />
+                        <a href="">
+                            <i></i>
+                            <h3>Residencial Flor de Liz</h3>
+                            <span>R$190.000,00</span>
+                            <span>Belo Horizonte</span>
+                            <svg width="49" height="12" viewBox="0 0 49 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="49" height="12" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.0204082 0.0833333)"/>
+                                </pattern>
+                                <image id="image0" width="49" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAMCAYAAADLeFVvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUIyMzExQzMxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUIyMzExQzQxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QjIzMTFDMTE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QjIzMTFDMjE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjWScjQAAADySURBVHjaYvz//z/DIANKQBwNxHOB+BkxGpgYBh9gBeImIL4JxJ1ArExIA+MgjAlpIH6CxP8NxLOBeBYQXxwqnmAD4p845FYA8QQgPonuiWIgbQvEfweBB34BsQAQexBQtxOI+4B4F8wTF4C0PsPQBIeBOJkFSJwDYnUg/j4IHAVK24xAzAfEzHjUfQHiZUC8Hoifg2KCG8jgwZMO6e0JEDgOxJpY5F9DM/lkIH4BEwTFxFcoHkzgBxr/MRBPBOKZ0FgY9KUTAzRpcwDxJWhptARa1GIFLIPQA1zQtL4PiOcQo2EwxgQnEBsC8TFiNQAEGAC+WENTTUOVCAAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>                                                        
+                        </a>
+                    </div>                    
+
+                    <div class="hoverzoom">
+                        <img src="assets/images/imovel_003.jpg" alt="" />
+                        <a href="">
+                            <i></i>
+                            <h3>Residencial Flor de Liz</h3>
+                            <span>R$190.000,00</span>
+                            <span>Belo Horizonte</span>
+                            <svg width="49" height="12" viewBox="0 0 49 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="49" height="12" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="scale(0.0204082 0.0833333)"/>
+                                </pattern>
+                                <image id="image0" width="49" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAMCAYAAADLeFVvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUIyMzExQzMxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUIyMzExQzQxNkY3MTFFQjkwNjlGQTE4QkFDMkQ3MTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QjIzMTFDMTE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QjIzMTFDMjE2RjcxMUVCOTA2OUZBMThCQUMyRDcxMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjWScjQAAADySURBVHjaYvz//z/DIANKQBwNxHOB+BkxGpgYBh9gBeImIL4JxJ1ArExIA+MgjAlpIH6CxP8NxLOBeBYQXxwqnmAD4p845FYA8QQgPonuiWIgbQvEfweBB34BsQAQexBQtxOI+4B4F8wTF4C0PsPQBIeBOJkFSJwDYnUg/j4IHAVK24xAzAfEzHjUfQHiZUC8Hoifg2KCG8jgwZMO6e0JEDgOxJpY5F9DM/lkIH4BEwTFxFcoHkzgBxr/MRBPBOKZ0FgY9KUTAzRpcwDxJWhptARa1GIFLIPQA1zQtL4PiOcQo2EwxgQnEBsC8TFiNQAEGAC+WENTTUOVCAAAAABJRU5ErkJggg=="/>
+                                </defs>
+                            </svg>                                                        
+                        </a>
+                    </div> 
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="oportal">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="assets/images/portal_bh_imoveis-sobre.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 box-sobre">
+                <h2>O Portal BH</h2>
+                <p>
+                    Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis.
+                </p>
+                <a href="">Leia mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="recentes">
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-12">
+                <h2>Imóveis Recentes</h2>
+            </div>
+
+            <!-- Loop dos destaques -->
+
+            <!-- imovel destaque -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-destaque">
+                    <a href="">
+                        <i></i>
+                        <div class="box-img">
+                            <img src="assets/images/imovel_001.jpg" alt="" class="img-fluid">
+                        </div>                        
+                        <div class="container-destaque">
+                            <h3>
+                                Residencial Flor de Liz
+                            </h3>
+                            <span class="valor">R$190.000,00</span>
+                            <span>
+                                62 m²  2 Quartos  2 Banheiros  1 Vaga
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. 
+                                Nullam aliquet in turpis vel sollicitudin
+                            </p>
+                            <span class="ver-detalhes">Ver detalhes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // imovel destaque -->
+
+            <!-- imovel destaque -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-destaque">
+                    <a href="">
+                        <i></i>
+                        <div class="box-img">
+                            <img src="assets/images/imovel_001.jpg" alt="" class="img-fluid">
+                        </div>                        
+                        <div class="container-destaque">
+                            <h3>
+                                Residencial Flor de Liz
+                            </h3>
+                            <span class="valor">R$190.000,00</span>
+                            <span>
+                                62 m²  2 Quartos  2 Banheiros  1 Vaga
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. 
+                                Nullam aliquet in turpis vel sollicitudin
+                            </p>
+                            <span class="ver-detalhes">Ver detalhes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // imovel destaque -->
+
+            <!-- imovel destaque -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-destaque">
+                    <a href="">
+                        <i></i>
+                        <div class="box-img">
+                            <img src="assets/images/imovel_001.jpg" alt="" class="img-fluid">
+                        </div>                        
+                        <div class="container-destaque">
+                            <h3>
+                                Residencial Flor de Liz
+                            </h3>
+                            <span class="valor">R$190.000,00</span>
+                            <span>
+                                62 m²  2 Quartos  2 Banheiros  1 Vaga
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. 
+                                Nullam aliquet in turpis vel sollicitudin
+                            </p>
+                            <span class="ver-detalhes">Ver detalhes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // imovel destaque -->
+            
+            <!-- imovel destaque -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-destaque">
+                    <a href="">
+                        <i></i>
+                        <div class="box-img">
+                            <img src="assets/images/imovel_001.jpg" alt="" class="img-fluid">
+                        </div>                        
+                        <div class="container-destaque">
+                            <h3>
+                                Residencial Flor de Liz
+                            </h3>
+                            <span class="valor">R$190.000,00</span>
+                            <span>
+                                62 m²  2 Quartos  2 Banheiros  1 Vaga
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. 
+                                Nullam aliquet in turpis vel sollicitudin
+                            </p>
+                            <span class="ver-detalhes">Ver detalhes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // imovel destaque -->
+            
+            <!-- imovel destaque -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-destaque">
+                    <a href="">
+                        <i></i>
+                        <div class="box-img">
+                            <img src="assets/images/imovel_001.jpg" alt="" class="img-fluid">
+                        </div>                        
+                        <div class="container-destaque">
+                            <h3>
+                                Residencial Flor de Liz
+                            </h3>
+                            <span class="valor">R$190.000,00</span>
+                            <span>
+                                62 m²  2 Quartos  2 Banheiros  1 Vaga
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. 
+                                Nullam aliquet in turpis vel sollicitudin
+                            </p>
+                            <span class="ver-detalhes">Ver detalhes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // imovel destaque -->
+            
+            <!-- imovel destaque -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-destaque">
+                    <a href="">
+                        <i></i>
+                        <div class="box-img">
+                            <img src="assets/images/imovel_001.jpg" alt="" class="img-fluid">
+                        </div>                        
+                        <div class="container-destaque">
+                            <h3>
+                                Residencial Flor de Liz
+                            </h3>
+                            <span class="valor">R$190.000,00</span>
+                            <span>
+                                62 m²  2 Quartos  2 Banheiros  1 Vaga
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. 
+                                Nullam aliquet in turpis vel sollicitudin
+                            </p>
+                            <span class="ver-detalhes">Ver detalhes</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // imovel destaque -->            
+
+
+            <div class="col-12 text-center">
+                <a href="" class="bto-ver-mais">Ver outros imóveis</a>
+            </div>            
+
+            <!-- // Fim Loop dos destaques -->
+            
+        </div>
+    </div>
+</section>
+
+
+<section id="newsletter">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-2">
+                <h2>Receba nossas novidades<br>em seu e-mail</h2>
+            </div>
+            <div class="col-lg-8 col-md-10">
+                    <form action="">
+                        <!-- ATENCAO mantenha essa div form-newsletter sempre envolvendo os campos -->
+                        <div class="form-newsletter">
+                            <input type="text" name="news-nome" id="news-nome" placeholder="Nome">
+                            <input type="email" name="news-email" id="news-email"  placeholder="E-mail">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="">
+                    <img src="assets/images/logo_portal_bh_imoveis.png" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <h2>Endereço</h2>
+                <address>
+                    <!-- link para google maps do endereço -->
+                    <a href="" target="_blank">
+                        Rua Anibal Teixeira, 1111 - Centro
+                        Belo Horizonte MG - 00000-000                        
+                    </a>
+                </address>
+            </div>
+
+            <div class="col-lg-4">
+                <h2>Contato</h2>
+                <a href="tel:3133333333">(31) 3333-3333</a>
+                |
+                <a href="tel:3199999999">(31) 99999-9999</a><br>
+                <a href="mailto:portalbh@portalbh.com.br">portalbh@portalbh.com.br</a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid box-direitos">
+        <span>Todos os direitos reservados</span>
+    </div>
+    
+</footer>
+
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+/*
+=====================================================
+Meida Queries  991px
+=====================================================
+*/
+
+
+@media (min-width: 991px) {
+    header{
+        .container-fluid{
+            .row{
+                width: 85%;
+            }
+        }
+    }
+
+    #newsletter{
+        .container-fluid .row{
+            width: 85%;
+        }
+    }    
+
+}
+// 991px

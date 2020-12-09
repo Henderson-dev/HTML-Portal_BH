@@ -1,0 +1,224 @@
+/*
+=====================================================
+Meida Queries  768px
+=====================================================
+*/
+@media (min-width: 768px) {
+
+    header{
+        .container-fluid{
+            .row{
+                width: 95%;
+            }
+        }
+        .row-menu{
+            nav{
+                display: inline-block;
+                grid-template-columns: 30%;
+                padding: 0;
+
+                .menu {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    margin-top: 0;
+                    position: initial;
+                    background-color: #fff;
+                    li{
+                        margin-right: 14px;
+                    }
+                    li:last-child {
+                        margin-right: 0;
+                    }                    
+                    li a {
+                        display: block;
+                        padding: 10px 0;
+                        color: var(--marron);
+                        text-align: center;
+                        text-decoration: none;
+                        &a:hover {
+                            color: var(--marron_hover);
+                        } 
+                    }
+                /* Effect 21: borders slight translate */
+                .cl-effect-21 a {
+                    color: var(--marron);
+                    -webkit-transition: color 0.3s;
+                    -moz-transition: color 0.3s;
+                    transition: color 0.3s;
+                }
+                .cl-effect-21 a::before,
+                .cl-effect-21 a::after {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--marron);
+                    content: '';
+                    opacity: 0;
+                    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+                    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+                    transition: opacity 0.3s, transform 0.3s;
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+                .cl-effect-21 a::before {
+                    top: 0;
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+                .cl-effect-21 a::after {
+                    bottom: 0;
+                    -webkit-transform: translateY(10px);
+                    -moz-transform: translateY(10px);
+                    transform: translateY(10px);
+                }
+                .cl-effect-21 a:hover,
+                .cl-effect-21 a:focus {
+                    color:var(--marron);
+                }
+
+                .cl-effect-21 a:hover::before,
+                .cl-effect-21 a:focus::before,
+                .cl-effect-21 a:hover::after,
+                .cl-effect-21 a:focus::after {
+                    opacity: 1;
+                    -webkit-transform: translateY(0px);
+                    -moz-transform: translateY(0px);
+                    transform: translateY(0px);
+                }                                        
+                }                
+            }
+
+        }
+    }    
+
+    #topo{
+        h1{
+            margin-bottom: 70px;
+        }
+        .area-form{
+            flex-direction: row;
+            height: 50px;
+            width: auto;
+            padding: 0 0 0 20px;
+
+            div.box-select {
+                width: 130px;
+                border-right: 1px solid var(--preto);
+                margin-right: 12px;
+            }
+            div.box-select::after {
+                content: '';
+                width: 100%;
+                height: 35px;
+                position: absolute;
+                right: 5px;
+                top: 1px;
+                background-color: #fff;
+                background-repeat: no-repeat;
+                background-image: url('../images/seta-select.svg');
+                background-position: 96% center;
+                z-index: 1;
+            }                   
+            input[type="text"],select{
+                border: none;
+                margin: 0 12px 0 0;
+            }
+            input[type="text"]{
+                width: 220px;
+                margin-bottom: 0;
+            }
+            select{
+                width: 130px;
+            }
+            input[type="submit"]{
+                border: none;
+                background-color: var(--marron);
+                height: 100%;
+                border-radius: 0 15px 15px 0;
+                cursor: pointer;
+                color: #ffffff;
+                padding: 0 24px;
+                width: initial;
+            }             
+        }
+    }
+
+    #destaque{
+        .container-fluid .row{
+            width: 85%;
+         }        
+        .container-cards{
+            grid-template-columns: repeat(3, 1fr);
+            .hoverzoom:nth-child(1){
+                grid-row: 1;
+            }
+            .hoverzoom:nth-child(2){
+                grid-row: 1 / 3;
+            }               
+        }
+    }
+
+    #oportal{
+        .container-fluid .row{
+            width: 75%;
+         }
+         .box-sobre{
+            padding: 0 30px;
+        }
+        h2{
+            font-size: 42;
+            line-height: normal; 
+        }               
+    }
+
+    #recentes{
+        .container-fluid .row{
+            width: 85%;
+         }
+    }
+
+    #newsletter{
+        .container-fluid .row{
+            width: 100%;
+        }
+        h2{
+            margin-bottom: 0;
+         }        
+        .form-newsletter{
+            flex-direction: row;
+            height: 75px;
+            justify-content: flex-start;
+            align-items: flex-end;             
+
+            input[type="text"], input[type="email"]{
+                margin-bottom: 0;             
+            }
+            input[type="submit"]{
+                width: initial;
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    footer{   
+        .container-fluid .row{
+            width: 85%;
+        }
+        footer{
+            h2{
+                margin-top: 0;
+            }
+        }        
+    }
+
+
+}
+// 768px

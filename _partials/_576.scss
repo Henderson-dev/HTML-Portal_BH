@@ -1,0 +1,38 @@
+/*
+=====================================================
+Meida Queries  576px
+=====================================================
+*/
+
+@media (min-width: 576px) {
+    #topo{
+        h1{
+            font-size: 44px;
+            line-height: 56px;
+        }
+    }
+    #destaque{
+        h2{
+            font-size: 42px;
+            line-height: normal;
+            margin-bottom: 45px;    
+        }
+        h2::after{
+            bottom: -10px;
+            left: 0;
+        }        
+    }
+    #recentes{
+        padding: 70px 0;    
+        h2{
+            font-size: 42px;
+            line-height: 19px;        
+        }
+    }
+    #newsletter{
+        padding: 70px 0;
+     
+    }
+ 
+}
+// 576px
